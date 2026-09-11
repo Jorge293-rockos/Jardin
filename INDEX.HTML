@@ -1,0 +1,284 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Un detalle especial</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA INICIAL -->
+    <div id="inicio">
+
+        <div class="caja-inicio">
+
+            <div class="flor-icono">🌻</div>
+
+            <h1>Un pequeño detalle</h1>
+
+            <p>Escribe tu nombre para comenzar</p>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Tu nombre..."
+                maxlength="25"
+            >
+
+            <button onclick="comenzar()">
+                Entrar al jardín
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXPERIENCIA -->
+    <div id="experiencia">
+
+        <!-- Fondo -->
+        <div class="cielo"></div>
+
+        <div class="luna"></div>
+
+        <!-- Estrellas -->
+        <div id="estrellas"></div>
+
+
+        <!-- MENSAJE -->
+        <div class="mensaje">
+
+            <div class="cinta">
+
+                <div class="cinta-lado izquierda-cinta"></div>
+
+                <span id="nombreMostrado">
+                    Tu nombre
+                </span>
+
+                <div class="cinta-lado derecha-cinta"></div>
+
+            </div>
+
+            <div class="linea"></div>
+
+            <p id="mensajePersonalizado">
+                Eres una persona muy especial.
+            </p>
+
+            <div class="corazon">♥</div>
+
+        </div>
+
+
+        <!-- JARDÍN -->
+        <div class="jardin">
+
+
+            <!-- GIRASOL 1 -->
+            <div class="flor girasol g1">
+
+                <div class="cabeza">
+                    <div class="petalos"></div>
+                    <div class="centro"></div>
+                </div>
+
+                <div class="tallo"></div>
+
+                <div class="hoja izquierda"></div>
+                <div class="hoja derecha"></div>
+
+            </div>
+
+
+            <!-- GIRASOL 2 -->
+            <div class="flor girasol g2">
+
+                <div class="cabeza">
+                    <div class="petalos"></div>
+                    <div class="centro"></div>
+                </div>
+
+                <div class="tallo"></div>
+
+                <div class="hoja izquierda"></div>
+
+            </div>
+
+
+            <!-- ROSA 1 -->
+            <div class="flor rosa r1">
+
+                <div class="rosa-cabeza">
+
+                    <div class="rosa-petal p1"></div>
+                    <div class="rosa-petal p2"></div>
+                    <div class="rosa-petal p3"></div>
+                    <div class="rosa-petal p4"></div>
+
+                    <div class="rosa-centro"></div>
+
+                </div>
+
+                <div class="tallo"></div>
+
+                <div class="hoja izquierda"></div>
+                <div class="hoja derecha"></div>
+
+            </div>
+
+
+            <!-- ROSA 2 -->
+            <div class="flor rosa r2">
+
+                <div class="rosa-cabeza">
+
+                    <div class="rosa-petal p1"></div>
+                    <div class="rosa-petal p2"></div>
+                    <div class="rosa-petal p3"></div>
+                    <div class="rosa-petal p4"></div>
+
+                    <div class="rosa-centro"></div>
+
+                </div>
+
+                <div class="tallo"></div>
+
+                <div class="hoja derecha"></div>
+
+            </div>
+
+
+            <!-- TULIPAN 1 -->
+            <div class="flor tulipan t1">
+
+                <div class="tulipan-cabeza"></div>
+
+                <div class="tallo"></div>
+
+                <div class="hoja izquierda"></div>
+
+            </div>
+
+
+            <!-- TULIPAN 2 -->
+            <div class="flor tulipan t2">
+
+                <div class="tulipan-cabeza"></div>
+
+                <div class="tallo"></div>
+
+                <div class="hoja derecha"></div>
+
+            </div>
+
+
+            <!-- VIOLETA 1 -->
+            <div class="flor violeta v1">
+
+                <div class="violeta-cabeza">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <div class="violeta-centro"></div>
+
+                </div>
+
+                <div class="tallo"></div>
+
+            </div>
+
+
+            <!-- VIOLETA 2 -->
+            <div class="flor violeta v2">
+
+                <div class="violeta-cabeza">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <div class="violeta-centro"></div>
+
+                </div>
+
+                <div class="tallo"></div>
+
+            </div>
+
+
+            <!-- MARGARITA 1 -->
+            <div class="flor margarita m1">
+
+                <div class="margarita-cabeza">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <div class="margarita-centro"></div>
+
+                </div>
+
+                <div class="tallo"></div>
+
+            </div>
+
+
+            <!-- MARGARITA 2 -->
+            <div class="flor margarita m2">
+
+                <div class="margarita-cabeza">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <div class="margarita-centro"></div>
+
+                </div>
+
+                <div class="tallo"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PÉTALOS -->
+        <div id="petalos"></div>
+
+        <!-- BRILLOS -->
+        <div id="brillos"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

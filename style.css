@@ -1,0 +1,1048 @@
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: Georgia, serif;
+}
+
+
+/* =================================
+   PANTALLA DE INICIO
+================================= */
+
+#inicio {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #292039,
+            #080914 70%
+        );
+
+    z-index: 100;
+}
+
+.caja-inicio {
+    width: 420px;
+    max-width: 90%;
+
+    text-align: center;
+
+    padding: 45px 35px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.07);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 50px rgba(255,200,80,0.08);
+
+    animation: aparecer 1.5s ease;
+}
+
+.flor-icono {
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+    animation: flotar 3s infinite ease-in-out;
+}
+
+.caja-inicio h1 {
+    color: #fff4ce;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.caja-inicio p {
+    color: #cfc7bc;
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+}
+
+#nombre {
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,220,130,0.3);
+
+    outline: none;
+
+    background: rgba(0,0,0,0.3);
+
+    color: white;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+#nombre::placeholder {
+    color: #aaa;
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d99b20,
+            #f4c84d
+        );
+
+    color: #241a05;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(255,200,70,0.3);
+}
+
+
+/* =================================
+   EXPERIENCIA
+================================= */
+
+#experiencia {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   CIELO
+================================= */
+
+.cielo {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(255,180,50,0.15),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            to bottom,
+            #030611,
+            #0a122b 45%,
+            #202c4a 75%,
+            #413c36
+        );
+}
+
+
+/* =================================
+   LUNA
+================================= */
+
+.luna {
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: 12%;
+    top: 10%;
+
+    border-radius: 50%;
+
+    background: #fff6cc;
+
+    box-shadow:
+        0 0 25px #fff1a8,
+        0 0 70px rgba(255,220,100,0.25);
+}
+
+
+/* =================================
+   ESTRELLAS
+================================= */
+
+.estrella {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 0 8px white;
+
+    animation: parpadear infinite alternate;
+}
+
+
+/* =================================
+   MENSAJE
+================================= */
+
+.mensaje {
+    position: absolute;
+
+    top: 7%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    z-index: 20;
+
+    color: #fff6dc;
+
+    animation: mensajeEntrada 2s ease;
+}
+
+
+/* =================================
+   CINTA
+================================= */
+
+.cinta {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 300px;
+
+    padding: 14px 35px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #d9a52b,
+            #b77b0b
+        );
+
+    color: #fff4b8;
+
+    font-size: 32px;
+
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 2px 3px rgba(0,0,0,0.4);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.25);
+
+    animation: cintaEntrada 2s ease;
+}
+
+
+/* extremos de la cinta */
+
+.cinta::before,
+.cinta::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 35px;
+
+    height: 100%;
+
+    background: #8e5e08;
+
+    z-index: -1;
+}
+
+.cinta::before {
+    left: -25px;
+
+    clip-path: polygon(
+        100% 0,
+        0 15%,
+        30% 50%,
+        0 85%,
+        100% 100%
+    );
+}
+
+.cinta::after {
+    right: -25px;
+
+    clip-path: polygon(
+        0 0,
+        100% 15%,
+        70% 50%,
+        100% 85%,
+        0 100%
+    );
+}
+
+
+.linea {
+    width: 90px;
+
+    height: 1px;
+
+    background: #e9c85d;
+
+    margin: 15px auto;
+}
+
+.mensaje p {
+    font-size: 18px;
+
+    color: #ddd5c6;
+
+    line-height: 1.6;
+}
+
+.corazon {
+    margin-top: 10px;
+
+    color: #ffd34e;
+
+    font-size: 20px;
+
+    animation: latir 2s infinite;
+}
+
+
+/* =================================
+   JARDÍN
+================================= */
+
+.jardin {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 430px;
+
+    z-index: 5;
+}
+
+
+/* =================================
+   FLORES
+================================= */
+
+.flor {
+    position: absolute;
+
+    bottom: 20px;
+
+    width: 150px;
+
+    height: 330px;
+
+    transform-origin: bottom center;
+
+    opacity: 0;
+
+    animation:
+        florecer 2s ease forwards,
+        balancear 5s 2s ease-in-out infinite;
+}
+
+
+/* posiciones */
+
+.g1 {
+    left: 5%;
+
+    transform: scale(.9);
+
+    animation-delay: .5s;
+}
+
+.g2 {
+    left: 20%;
+
+    transform: scale(.65);
+
+    animation-delay: 1s;
+}
+
+.r1 {
+    left: 38%;
+
+    transform: scale(.85);
+
+    animation-delay: 1.5s;
+}
+
+.r2 {
+    left: 52%;
+
+    transform: scale(.65);
+
+    animation-delay: 2s;
+}
+
+.t1 {
+    left: 65%;
+
+    transform: scale(.75);
+
+    animation-delay: 2.5s;
+}
+
+.t2 {
+    left: 76%;
+
+    transform: scale(.55);
+
+    animation-delay: 3s;
+}
+
+.v1 {
+    left: 87%;
+
+    transform: scale(.55);
+
+    animation-delay: 3.5s;
+}
+
+.v2 {
+    left: 32%;
+
+    transform: scale(.45);
+
+    animation-delay: 4s;
+}
+
+.m1 {
+    left: 58%;
+
+    transform: scale(.5);
+
+    animation-delay: 4.5s;
+}
+
+.m2 {
+    left: 12%;
+
+    transform: scale(.45);
+
+    animation-delay: 5s;
+}
+
+
+/* =================================
+   TALLOS
+================================= */
+
+.tallo {
+    position: absolute;
+
+    width: 9px;
+
+    height: 230px;
+
+    left: 70px;
+
+    top: 105px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1d4c20,
+            #5b9c45,
+            #204b21
+        );
+}
+
+
+/* =================================
+   HOJAS
+================================= */
+
+.hoja {
+    position: absolute;
+
+    width: 80px;
+
+    height: 35px;
+
+    border-radius: 100% 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6db54e,
+            #20582b
+        );
+}
+
+.hoja.izquierda {
+    left: 15px;
+
+    top: 210px;
+
+    transform: rotate(25deg);
+}
+
+.hoja.derecha {
+    left: 65px;
+
+    top: 245px;
+
+    transform: rotate(-25deg);
+}
+
+
+/* =================================
+   GIRASOLES
+================================= */
+
+.girasol .cabeza {
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    top: 0;
+}
+
+.girasol .petalos {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        repeating-conic-gradient(
+            #ffd52f 0deg 15deg,
+            #e9a900 15deg 22deg
+        );
+
+    filter: drop-shadow(
+        0 0 8px rgba(255,200,30,.4)
+    );
+}
+
+.girasol .centro {
+    position: absolute;
+
+    width: 58px;
+    height: 58px;
+
+    top: 43px;
+    left: 43px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #b66a08,
+            #542c02
+        );
+
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,.5);
+}
+
+
+/* =================================
+   ROSAS
+================================= */
+
+.rosa-cabeza {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: 15px;
+    left: 15px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ff7c9d,
+            #c52955 65%,
+            #71152e
+        );
+
+    box-shadow:
+        0 0 20px rgba(255,70,110,.2);
+}
+
+.rosa-petal {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255,190,205,.5);
+
+    background:
+        radial-gradient(
+            circle,
+            #ff8eaa,
+            #c72c58
+        );
+}
+
+.p1 {
+    inset: 15px;
+}
+
+.p2 {
+    inset: 25px;
+
+    transform: rotate(45deg);
+}
+
+.p3 {
+    inset: 20px;
+
+    transform: rotate(90deg);
+}
+
+.p4 {
+    inset: 30px;
+
+    transform: rotate(135deg);
+}
+
+.rosa-centro {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    left: 45px;
+    top: 45px;
+
+    border-radius: 50%;
+
+    background: #8d1735;
+}
+
+
+/* =================================
+   TULIPANES
+================================= */
+
+.tulipan-cabeza {
+    position: absolute;
+
+    width: 85px;
+    height: 105px;
+
+    left: 32px;
+    top: 10px;
+
+    border-radius:
+        45% 45% 40% 40%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e73d55,
+            #ff7180,
+            #b91e38
+        );
+
+    clip-path: polygon(
+        0 20%,
+        25% 35%,
+        50% 0,
+        75% 35%,
+        100% 20%,
+        90% 100%,
+        10% 100%
+    );
+}
+
+
+/* =================================
+   VIOLETAS
+================================= */
+
+.violeta-cabeza {
+    position: absolute;
+
+    width: 85px;
+    height: 85px;
+
+    top: 20px;
+    left: 32px;
+}
+
+.violeta-cabeza span {
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    background:
+        radial-gradient(
+            circle at 40% 35%,
+            #b99aff,
+            #6332a5
+        );
+
+    border-radius: 50%;
+
+    top: 20px;
+    left: 20px;
+}
+
+.violeta-cabeza span:nth-child(1) {
+    transform: translateY(-20px);
+}
+
+.violeta-cabeza span:nth-child(2) {
+    transform: translate(18px,-5px);
+}
+
+.violeta-cabeza span:nth-child(3) {
+    transform: translate(10px,18px);
+}
+
+.violeta-cabeza span:nth-child(4) {
+    transform: translate(-12px,18px);
+}
+
+.violeta-cabeza span:nth-child(5) {
+    transform: translate(-20px,-5px);
+}
+
+.violeta-centro {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    left: 34px;
+    top: 34px;
+
+    border-radius: 50%;
+
+    background: #ffd94a;
+}
+
+
+/* =================================
+   MARGARITAS
+================================= */
+
+.margarita-cabeza {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: 10px;
+}
+
+.margarita-cabeza span {
+    position: absolute;
+
+    width: 35px;
+    height: 55px;
+
+    left: 43px;
+    top: 32px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    transform-origin: center bottom;
+}
+
+.margarita-cabeza span:nth-child(1) {
+    transform: rotate(0deg) translateY(-25px);
+}
+
+.margarita-cabeza span:nth-child(2) {
+    transform: rotate(45deg) translateY(-25px);
+}
+
+.margarita-cabeza span:nth-child(3) {
+    transform: rotate(90deg) translateY(-25px);
+}
+
+.margarita-cabeza span:nth-child(4) {
+    transform: rotate(135deg) translateY(-25px);
+}
+
+.margarita-cabeza span:nth-child(5) {
+    transform: rotate(180deg) translateY(-25px);
+}
+
+.margarita-cabeza span:nth-child(6) {
+    transform: rotate(225deg) translateY(-25px);
+}
+
+.margarita-cabeza span:nth-child(7) {
+    transform: rotate(270deg) translateY(-25px);
+}
+
+.margarita-cabeza span:nth-child(8) {
+    transform: rotate(315deg) translateY(-25px);
+}
+
+.margarita-centro {
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+
+    left: 40px;
+    top: 40px;
+
+    border-radius: 50%;
+
+    background: #e6a914;
+
+    z-index: 5;
+}
+
+
+/* =================================
+   ANIMACIONES
+================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes mensajeEntrada {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+}
+
+@keyframes cintaEntrada {
+
+    from {
+        transform:
+            scaleX(0);
+            opacity: 0;
+    }
+
+    to {
+        transform:
+            scaleX(1);
+            opacity: 1;
+    }
+}
+
+@keyframes florecer {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            scale(0)
+            translateY(100px);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes balancear {
+
+    0%,100% {
+        rotate: -2deg;
+    }
+
+    50% {
+        rotate: 2deg;
+    }
+}
+
+@keyframes parpadear {
+
+    from {
+        opacity: .2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes latir {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+
+/* =================================
+   PETALOS
+================================= */
+
+.petalo {
+    position: absolute;
+
+    width: 13px;
+    height: 22px;
+
+    border-radius: 100% 0 100% 0;
+
+    background: #ffd83d;
+
+    animation: caer linear forwards;
+}
+
+@keyframes caer {
+
+    from {
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            translateX(150px)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =================================
+   MOVIL
+================================= */
+
+@media (max-width: 600px) {
+
+    .caja-inicio {
+        padding: 35px 25px;
+    }
+
+    .caja-inicio h1 {
+        font-size: 27px;
+    }
+
+    .cinta {
+        min-width: 240px;
+
+        font-size: 25px;
+    }
+
+    .mensaje p {
+        font-size: 15px;
+    }
+
+    .jardin {
+        transform: scale(.75);
+
+        transform-origin: bottom center;
+    }
+
+}
